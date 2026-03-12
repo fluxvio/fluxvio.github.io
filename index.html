@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Fluxivo - Smart Tools for Modern Websites</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts & Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0d9488",
+            "primary-light": "#2dd4bf",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .gradient-mesh {
+      background-color: #f6f6f8;
+      background-image:
+        radial-gradient(at 0% 0%,
+          rgba(13, 148, 136, 0.1) 0px,
+          transparent 50%),
+        radial-gradient(at 100% 0%,
+          rgba(45, 212, 191, 0.05) 0px,
+          transparent 50%);
+    }
+
+    .bg-teal-gradient {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+    }
+
+    .text-teal-gradient {
+      background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* AOS custom tweaks */
+    [data-aos] {
+      pointer-events: none;
+    }
+
+    [data-aos].aos-animate {
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300 overflow-x-hidden">
+  <header
+    class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-2">
+          <div class="bg-teal-gradient p-1.5 rounded-lg">
+            <svg class="w-6 h-6 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <span class="text-xl font-bold tracking-tight">Fluxivo</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Services</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#work">Our Work</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#how-it-works">Process</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#why-us">Benefits</a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            class="hidden sm:block px-4 py-2 text-sm font-semibold hover:bg-slate-200 dark:hover:bg-slate-800 rounded-lg transition-all">
+            Login
+          </button>
+          <button
+            class="bg-teal-gradient hover:opacity-90 text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg shadow-teal-500/20 transition-all">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- Hero section with animations -->
+    <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden gradient-mesh">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1 text-center lg:text-left">
+            <div data-aos="fade-up" data-aos-duration="600"
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider mb-6">
+              <span class="material-symbols-outlined text-sm">bolt</span>
+              Next-Gen Web Intelligence
+            </div>
+            <h1 data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
+              class="text-4xl md:text-6xl font-black tracking-tight leading-tight mb-6">
+              Smart Tools for
+              <span class="text-teal-gradient">Modern Websites</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"
+              class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto lg:mx-0">
+              AI-powered tools that analyze, optimize, and improve websites
+              automatically. Scale your digital presence with data-driven
+              insights.
+            </p>
+            <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
+              class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              <button
+                class="w-full sm:w-auto px-8 py-4 bg-teal-gradient text-white font-bold rounded-xl shadow-xl shadow-teal-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                Try Our Tools
+              </button>
+              <button
+                class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                Get Started
+              </button>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="400"
+              class="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-4 opacity-70">
+              <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Trusted By</span>
+              <div class="flex gap-4">
+                <span
+                  class="px-3 py-1 bg-slate-200/50 dark:bg-slate-800 rounded-md text-sm font-semibold">NexaFlow</span>
+                <span class="px-3 py-1 bg-slate-200/50 dark:bg-slate-800 rounded-md text-sm font-semibold">Vantix</span>
+                <span
+                  class="px-3 py-1 bg-slate-200/50 dark:bg-slate-800 rounded-md text-sm font-semibold">ElevateIQ</span>
+                <span
+                  class="px-3 py-1 bg-slate-200/50 dark:bg-slate-800 rounded-md text-sm font-semibold">Synapse</span>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="800" class="flex-1 w-full max-w-2xl">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1 bg-gradient-to-r from-primary-light to-primary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+              </div>
+              <div
+                class="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+                <img alt="Dashboard Preview" class="w-full h-auto"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjM17SLV2645pY9qeXvT3ti-3aqUjydCxmoPrwqHo9Ad-Kok6bXgs-aNXK_BMzE0iRIem1NBnE7tFMp0TJvyY6GIqvNOghtYIenvizkUvPfb1UgQSVLc-Q0Xz5zqPpV-KxRTN6I2fuZ6E2l_hBls1_96B2qyV63Qhlj9k-l_HFiDQ5PqxfrMzOZtJvemYOGx1VUYp04EooP94StwDpv_yqyNqRzL7ryRAQnt-SByRHkEx8uzSrnbr6KA_gB-dDQUOGuH9j-Wr9OFc" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="py-24 bg-white dark:bg-background-dark" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="text-center mb-16">
+          <h2 class="text-primary font-bold text-sm uppercase tracking-widest mb-3">
+            Our Expertise
+          </h2>
+          <h3 class="text-3xl md:text-4xl font-black mb-4">
+            Tailored Solutions for Tech Growth
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Comprehensive tools and development services to scale your digital
+            presence.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- card 1 -->
+          <div data-aos="fade-up" data-aos-delay="0"
+            class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-gradient group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">health_metrics</span>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Test Server Health Check</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Monitor and check health/performance in real-time. Ensure 99.9%
+              uptime with our automated diagnostics.
+            </p>
+          </div>
+          <!-- card 2 -->
+          <div data-aos="fade-up" data-aos-delay="100"
+            class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-gradient group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">ads_click</span>
+            </div>
+            <h4 class="text-xl font-bold mb-3">AI Ads Suggestion</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Enter URL, AI suggests best ads for monetization. Maximize your
+              revenue with smart ad placement strategies.
+            </p>
+          </div>
+          <!-- card 3 -->
+          <div data-aos="fade-up" data-aos-delay="200"
+            class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-gradient group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">web</span>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Landing Page Development</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Fast, optimized, and modern high-converting pages. Built with
+              the latest frameworks for maximum speed.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div data-aos="fade-up" data-aos-delay="300"
+            class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-gradient group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <h4 class="text-xl font-bold mb-3">MVP Page Development</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Quickly build minimum viable products to test ideas. From
+              concept to launch in weeks, not months.
+            </p>
+          </div>
+          <!-- card 5 -->
+          <div data-aos="fade-up" data-aos-delay="400"
+            class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal-gradient group-hover:text-white transition-all">
+              <span class="material-symbols-outlined">code</span>
+            </div>
+            <h4 class="text-xl font-bold mb-3">Web App Development</h4>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Full-stack frontend and backend development. Scalable
+              architectures tailored to your business needs.
+            </p>
+          </div>
+          <!-- card 6 (special) -->
+          <div data-aos="fade-up" data-aos-delay="500"
+            class="p-8 rounded-2xl bg-teal-gradient flex flex-col items-center justify-center text-center text-white">
+            <h4 class="text-2xl font-bold mb-4">Need a Custom Solution?</h4>
+            <p class="text-white/80 text-sm mb-6">
+              Our engineers are ready to tackle your unique challenges.
+            </p>
+            <button class="bg-white text-primary px-6 py-2 rounded-lg font-bold hover:bg-slate-100 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work / Projects section with added "View Site" button -->
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="work">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="text-center mb-16">
+          <h2 class="text-primary font-bold text-sm uppercase tracking-widest mb-3">
+            Our Work
+          </h2>
+          <h3 class="text-3xl md:text-4xl font-black mb-4">
+            Recent Projects
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            A showcase of modern, high-converting websites we've built for our
+            clients.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div data-aos="fade-up" data-aos-delay="0"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Restaurant Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjXVe6-F1l9tjW4Cu6NEcCJeHHRuYv8BcrrfkUvQt5I0djaiT34yqQ0wuDPwwXlFhyV8775_tpdqXWbWtHkgPrm0QMs6eCWmkuPKAmt4zmCsmMfauBrkkxip1Twsy46RWKXngWnB6u0UfKZOod6yyBN-LXEZHyNczASBLcTCp8hGwo4PDEuu0JDYE-DhIJx1yEZvzIysEIqeYuAsJ_kGBWnccmWRPqpHYu2kZFIwBgakWG3dROdiQY1hTvc4P_ejyzddAA-ZD661Q" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Savory &amp; Silk
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                A high-end restaurant website featuring elegant typography and
+                immersive food photography to drive bookings.
+              </p>
+              <!-- View Site button (link) -->
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div data-aos="fade-up" data-aos-delay="100"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Gym Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfB5Nq3ar7bfYt-JwpGlffe3323lsslEw4v8HPVigNoy-8_2jFfer5IyksovN4GsLfRW2pbLOp5NmgAijvNshL3PXhBPxa7KSckCoaMMNE36ay46xd1VHTFwCVXNZA5oTKQc4ZI1DVWpTm7Urby0bRoJtqpDezMwJ2bX_yaXbized2rLzmNtORzqxS9M-ddZe-E7N7Cmpn17Kcf3uTmXIucrpM0E8mpCQZS1CKu18f2FT7Lrll_2kz21VhjC06Yd_7Zu1OrkjfFPE" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Iron Pulse Fitness
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Energetic and bold design optimized for mobile use, helping
+                fitness enthusiasts sign up for classes on the go.
+              </p>
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div data-aos="fade-up" data-aos-delay="200"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Real Estate Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJp9FFTMqIv4_WDGfhtq0fQ1yrCd5UXIRArW6QCBinxMGxQz-1Qhxo068kqpaNovPv37n3Zqeit1NwdqyZ7dfBhBRcFLXlkFosswH34KnTsA3YMRFaAzQs8WzpfH_MujVKQRFhAbkXaFY91D4GsPNSv80gyaWlk_WvJv4dZ0ww29VLajhqVhD89qAIQ1jkXpuVhZeSJGBSKnAM_S7pwhtvkg4MNmhvSjuwFsdzmyNGEXkXctnNIwSFYhMqnQLC-TSaifPQ9ATop6U" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Avenue Estates
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                A clean, professional layout focused on clarity and ease of
+                navigation for luxury property listings.
+              </p>
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div data-aos="fade-up" data-aos-delay="300"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Wellness Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLxAI_sw1WgtxsNvyIVzCU8L1HDa0am-UkicCbDsvxJWuZTRkH_1A-KJqy3aKg5dEaGkRs0uH16SYfwnTsGxAOAfr_U1boOwwkL5mPUKNsX2CBQAS_djDlkTTP2OXOfXy8K6jZ9_WL5YMd9creOvuKc33WidKaTbHM-6P7BSD81zVfl4CbqLAyYUNtzQml-rG-cDVP-0miRCjZu1dY3fBthzeyzOUSVieiC4dpk1dHwoNQxekiw6xxtpHR_y7NJZYXQVllqiQRKt8" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Serenity Spa
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Calm, soothing aesthetic for a health and spa business,
+                utilizing soft colors to create a relaxing user journey.
+              </p>
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div data-aos="fade-up" data-aos-delay="400"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Barbershop Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxO9zODPwAeuS5TqkFUJAfPHbJQ2bnK9hXHnocugd-LzytBmuix2jJflIx0fU_HTnSnNyhHGzw678EL7BPnpjUSUbmO9DgxNK_i3bN136M30TKJTGYmSEA4KdElIvgOAm3mefSAOfRDap_LWfaJIFOYveDfNthAds0Kj6YmkDelGExH83TwAiuqmzzJBVoCPgn8cIykqw0j7WNxVBGFgvJEBoTwuFUrhjtGPgnNV7qW1dxVCl1igSTBRPbd6g9OnkyqJ6c1GI1PgM" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                The Grooming Lounge
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                A stylish, modern-vintage look for high-end grooming services
+                with integrated appointment scheduling.
+              </p>
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div data-aos="fade-up" data-aos-delay="500"
+            class="group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="aspect-video bg-slate-100 overflow-hidden">
+              <img alt="Pet Services Website"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS90RdApo3Mq1JWWmi7jqM7FnsewX7NJKXtBGrUu_HrjCrFYUcn1qnJLnGaAeL9EpiZw1K4iaKTEJ2dow1_QPHA9V1jcdK8GaxkWUT2RmZjqRTBa3dGklgUGFc775Jv7wQKCIghZHgc-buveEIMw2I_Se_AgDlXw56zXy-sNyWPEUEdEy_DAnD7b4wAIv2YM-kt7nPaieXmJqgLya2L0HNROh0vebhwqs3deI_qIHuBLgth_UW_EnWQhPl8wzr2dWl2CrvMM_Guyo" />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Happy Paws Care
+              </h4>
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                Friendly and playful design for pet care businesses, designed
+                to build trust with pet owners instantly.
+              </p>
+              <div class="mt-auto flex justify-end">
+                <a href="#" target="_blank" rel="noopener"
+                  class="inline-flex items-center gap-1 text-primary font-medium text-sm hover:underline group/btn">
+                  <span>View Site</span>
+                  <span
+                    class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <button
+            class="px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-xl transition-all">
+            View All Projects
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-24 bg-white dark:bg-background-dark" id="how-it-works">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div data-aos="fade-right" class="lg:w-1/2">
+            <h3 class="text-3xl md:text-4xl font-black mb-8">How It Works</h3>
+            <div class="space-y-12">
+              <div class="flex gap-6">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-teal-gradient text-white rounded-full flex items-center justify-center font-bold">
+                  1
+                </div>
+                <div>
+                  <h5 class="text-xl font-bold mb-2">Enter Website</h5>
+                  <p class="text-slate-600 dark:text-slate-400">
+                    Simply input your URL into our platform. No complex
+                    integration required for initial analysis.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-teal-gradient text-white rounded-full flex items-center justify-center font-bold">
+                  2
+                </div>
+                <div>
+                  <h5 class="text-xl font-bold mb-2">AI Analyzes</h5>
+                  <p class="text-slate-600 dark:text-slate-400">
+                    Our neural networks scan your performance, SEO, and layout
+                    to find optimization opportunities.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-teal-gradient text-white rounded-full flex items-center justify-center font-bold">
+                  3
+                </div>
+                <div>
+                  <h5 class="text-xl font-bold mb-2">Get Recommendations</h5>
+                  <p class="text-slate-600 dark:text-slate-400">
+                    Receive a detailed report with actionable steps to improve
+                    speed and user experience.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <div
+                  class="flex-shrink-0 w-10 h-10 bg-teal-gradient text-white rounded-full flex items-center justify-center font-bold">
+                  4
+                </div>
+                <div>
+                  <h5 class="text-xl font-bold mb-2">Improve Monetization</h5>
+                  <p class="text-slate-600 dark:text-slate-400">
+                    Apply AI-suggested changes to see immediate growth in
+                    conversions and revenue.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-aos="fade-left" class="lg:w-1/2">
+            <div class="relative p-4 rounded-3xl bg-slate-200 dark:bg-slate-800">
+              <div class="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-inner p-2">
+                <img alt="Process Visualization" class="rounded-xl w-full"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCh0jjmQV9twBTFj0u2Xq0CNkob55vHt0-oVXYITqcW-9H9rvmWwFCPzN6JqevxdIX4CRpqXKFIqGwgd0XEkhkkie0pnlYUKzfaLwz8CJr99CiZKHwPJcoeSc8KMIYpnYxNANVjSTviEE4aIj3eU2QRr_zo4m04VZzkVv055m_Ksy1-RSc0JpPEQyBs3jQELp0Nsmsibq0yHnQSQbYjtscoGtrpQ1EKbuVSZiUdyfDJVs1ZKeRzeerau1-ghMxiWqc-eFYQLuTH0M" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-white dark:bg-background-dark" id="why-us">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="fade-up" class="text-center mb-16">
+          <h3 class="text-3xl md:text-4xl font-black mb-4">
+            Why Choose Fluxivo
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            We combine advanced AI with expert engineering to deliver superior
+            results.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div data-aos="fade-up" data-aos-delay="0" class="text-center p-6">
+            <div class="text-primary mb-4">
+              <span class="material-symbols-outlined text-5xl">speed</span>
+            </div>
+            <h5 class="text-lg font-bold mb-2">Fast Development</h5>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Rapid delivery cycles without compromising on quality or
+              performance.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100" class="text-center p-6">
+            <div class="text-primary mb-4">
+              <span class="material-symbols-outlined text-5xl">psychology</span>
+            </div>
+            <h5 class="text-lg font-bold mb-2">AI-Powered Insights</h5>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Leverage modern machine learning to understand your users
+              better.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200" class="text-center p-6">
+            <div class="text-primary mb-4">
+              <span class="material-symbols-outlined text-5xl">grid_view</span>
+            </div>
+            <h5 class="text-lg font-bold mb-2">Scalable Solutions</h5>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Infrastructure that grows with you, from MVP to enterprise
+              level.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300" class="text-center p-6">
+            <div class="text-primary mb-4">
+              <span class="material-symbols-outlined text-5xl">sell</span>
+            </div>
+            <h5 class="text-lg font-bold mb-2">Startup-Friendly</h5>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Flexible pricing tiers designed for startups at every stage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div data-aos="zoom-in"
+          class="bg-teal-gradient rounded-[2.5rem] px-8 py-16 md:px-16 text-center text-white relative overflow-hidden">
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl">
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-teal-400/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl">
+          </div>
+          <h2 class="text-3xl md:text-5xl font-black mb-6 relative z-10">
+            Ready to boost your website's performance?
+          </h2>
+          <p class="text-teal-50 text-lg mb-10 max-w-2xl mx-auto relative z-10">
+            Join 500+ companies using Fluxivo to optimize their digital
+            presence and increase conversions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <button
+              class="px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-slate-100 transition-all shadow-xl">
+              Get Started Now
+            </button>
+            <button
+              class="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all">
+              Schedule a Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- footer content unchanged (omitted for brevity, but present in final) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+        <div class="col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6">
+            <div class="bg-teal-gradient p-1 rounded-lg">
+              <svg class="w-5 h-5 text-white" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold tracking-tight">Fluxivo</span>
+          </div>
+          <p class="text-slate-600 dark:text-slate-400 max-w-xs mb-6">
+            Empowering modern web teams with AI-driven intelligence and
+            high-performance development services.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-teal-gradient hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-lg">share</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-teal-gradient hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-lg">hub</span>
+            </a>
+            <a class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-teal-gradient hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-lg">public</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h6 class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">
+            Services
+          </h6>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Server Health</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">AI Ads</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Landing Pages</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">MVP Dev</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">
+            Company
+          </h6>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Our Process</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Case Studies</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Careers</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="font-bold text-slate-900 dark:text-white mb-6 uppercase text-xs tracking-widest">
+            Support
+          </h6>
+          <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Help Center</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Contact</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Privacy</a>
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500 dark:text-slate-500">
+          © 2024 Fluxivo Inc. All rights reserved.
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          <p class="text-xs text-slate-500 dark:text-slate-500 font-medium">
+            All systems operational
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+      mirror: false,
+      offset: 50,
+    });
+  </script>
+</body>
+
+</html>
