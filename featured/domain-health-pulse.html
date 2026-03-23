@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Fluxvio</title>
+    <title>Domain Health Pulse | Case Study | Fluxvio</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Fluxvio - High-performance digital engineering. We build web apps, stunning websites, and ruthless automations.">
-    <meta name="keywords" content="digital agency, web development, automations, full-stack, SaaS">
-    <link rel="canonical" href="https://fluxvio.github.io/contact.html">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Read the case study on how Fluxvio built Domain Health Pulse to provide real-time DNS and custom domain monitoring.">
+    <meta name="keywords" content="domain health, DNS monitoring, SSL tracking, VanillaJS, Tailwind, web tool">
+    <link rel="canonical" href="https://fluxvio.github.io/featured/domain-health-pulse.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Contact Us | Fluxvio">
-    <meta property="og:description" content="High-performance digital engineering. We build web apps, stunning websites, and ruthless automations.">
-    <meta property="og:url" content="https://fluxvio.github.io/contact.html">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Domain Health Pulse | Case Study | Fluxvio">
+    <meta property="og:description" content="Read the case study on how Fluxvio built Domain Health Pulse.">
+    <meta property="og:url" content="https://fluxvio.github.io/featured/domain-health-pulse.html">
+    <meta property="og:type" content="article">
     
     <!-- Twitter Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Contact Us | Fluxvio">
-    <meta name="twitter:description" content="High-performance digital engineering. We build web apps, stunning websites, and ruthless automations.">
+    <meta name="twitter:title" content="Domain Health Pulse | Case Study | Fluxvio">
+    <meta name="twitter:description" content="Read the case study on how Fluxvio built Domain Health Pulse.">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1234567890"></script>
@@ -30,6 +30,7 @@
         gtag('js', new Date());
         gtag('config', 'G-1234567890');
     </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +58,7 @@
     </script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="bg-background text-white font-sans antialiased cursor-none">
@@ -77,7 +78,7 @@
         <nav id="navbar"
             class="fixed w-full top-0 z-50 transition-all duration-300 py-6 px-8 flex justify-between items-center transition-colors">
             <!-- Logo -->
-            <a href="index.html"
+            <a href="../index.html"
                 class="nav-logo text-2xl font-bold tracking-tighter flex items-center gap-2 hover:text-accent transition-colors duration-300 hoverable-link">
                 <span class="text-primary glow-text">Flux</span>
                 <span class="text-white">vio</span>
@@ -85,70 +86,83 @@
 
             <!-- Links -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html#services"
+                <a href="../index.html#services"
                     class="hoverable-link text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Services</a>
-                <a href="index.html#how"
+                <a href="../index.html#how"
                     class="hoverable-link text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Process</a>
-                <a href="index.html#work"
+                <a href="../index.html#work"
                     class="hoverable-link text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider">Work</a>
-                <a href="contact.html"
+                <a href="../contact.html"
                     class="hoverable-link px-6 py-2 bg-transparent border border-primary text-primary hover:bg-primary hover:text-background rounded-full transition-all duration-300 font-bold uppercase tracking-wider text-sm glow-border-primary">Start
                     Project</a>
             </div>
         </nav>
 
-        <!-- Contact Form Section -->
-        <section class="pt-40 pb-20 px-8 md:px-16 min-h-screen relative flex items-center justify-center">
-            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 pointer-events-none"></div>
-            <div class="max-w-xl w-full relative z-10">
-                <div class="text-center mb-12">
-                    <h1 class="text-5xl font-bold tracking-tighter mb-4 glow-text">Start a Project.</h1>
-                    <p class="text-gray-400">Tell us what you're looking to build. We'll get back to you within 24
-                        hours.</p>
+        <!-- Page Header -->
+        <section class="pt-40 pb-20 px-8 md:px-16 relative bg-surface border-b border-white/5">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5 pointer-events-none"></div>
+            <div class="max-w-4xl mx-auto relative z-10 text-center flex flex-col items-center">
+                <span class="text-primary tracking-widest uppercase font-bold text-sm mb-4">Web Tool + DNS Health</span>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-8 glow-text">Domain Health Pulse (DHP).</h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl">Monitor your domain's health at a glance. Get real-time insights on SSL status, DNS records, uptime, and security scores.</p>
+                <div class="w-16 h-1 bg-white mb-8"></div>
+            </div>
+        </section>
+
+        <!-- Project Details -->
+        <section class="py-24 px-8 md:px-16 relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 pb-16 border-b border-white/5">
+                    <div>
+                        <h4 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Category</h4>
+                        <p class="text-lg">Web Tool</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Role</h4>
+                        <p class="text-lg">Monitoring & Operations</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-accent uppercase tracking-widest mb-2">Tech Stack</h4>
+                        <p class="text-lg text-gray-400">VanillaJS, Tailwind, Crawler</p>
+                    </div>
                 </div>
 
-                <form
-                    class="bg-surface p-8 md:p-12 rounded-xl border border-white/10 shadow-[0_0_30px_rgba(0,166,255,0.1)] group hoverable-card"
-                    action="https://formspree.io/f/maqpgver" method="POST">
-                    <div class="space-y-6">
-                        <div>
-                            <label for="name"
-                                class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-widest">Name</label>
-                            <input type="text" id="name" required
-                                class="w-full bg-background border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(0,166,255,0.3)] transition-all text-white hoverable-card">
-                        </div>
-                        <div>
-                            <label for="email"
-                                class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-widest">Email</label>
-                            <input type="email" id="email" required name="email"
-                                class="w-full bg-background border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(0,166,255,0.3)] transition-all text-white hoverable-card">
-                        </div>
-                        <div>
-                            <label for="service"
-                                class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-widest">Service
-                                Required</label>
-                            <select id="service" required name="service"
-                                class="w-full bg-background border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(0,166,255,0.3)] transition-all text-white appearance-none hoverable-card cursor-none">
-                                <option value="">Select a specific service</option>
-                                <option value="automations">Fluxvio Automations</option>
-                                <option value="web-apps">Full-Stack Web Apps</option>
-                                <option value="websites">High-Performance Websites</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message"
-                                class="block text-sm font-medium text-gray-400 mb-2 uppercase tracking-widest">Project
-                                Details</label>
-                            <textarea id="message" rows="4" required name="message"
-                                class="w-full bg-background border border-white/10 rounded-md px-4 py-3 focus:outline-none focus:border-primary focus:shadow-[0_0_10px_rgba(0,166,255,0.3)] transition-all text-white hoverable-card"></textarea>
-                        </div>
+                <div class="prose prose-invert prose-lg max-w-none text-gray-300">
+                    <h2 class="text-3xl font-bold text-white mb-6">The Challenge</h2>
+                    <p class="mb-8">Keeping track of domain health, SSL certificates, DNS records, and uptime manually is tedious and error-prone. Organizations often miss critical expiration dates or unexpected DNS changes, leading to downtime, loss of revenue, and compromised security postures.</p>
 
-                        <button type="submit"
-                            class="w-full bg-primary text-background font-bold text-lg py-4 rounded-md transition-all duration-300 hover:bg-white glow-shadow hover:scale-[1.02] hoverable-btn uppercase tracking-widest mt-4">
-                            Submit Request
-                        </button>
+                    <h2 class="text-3xl font-bold text-white mb-6">The Solution</h2>
+                    <p class="mb-6">We engineered <strong>Domain Health Pulse (DHP)</strong>—a specialized web tool for realtime domain monitoring aimed to solve these exact operational blind spots.</p>
+                    <ul class="list-disc pl-6 mb-8 text-gray-400">
+                        <li class="mb-2"><strong>Lightweight Frontend:</strong> Built with VanillaJS and Tailwind to ensure a lightning-fast, highly responsive user interface.</li>
+                        <li class="mb-2"><strong>Custom Data Crawler:</strong> A bespoke crawler operates in the background to fetch real-time DNS, WHOIS, and SSL certificate data securely.</li>
+                        <li class="mb-2"><strong>Proactive Alerting:</strong> The dashboard summarizes health into actionable security scores, warning administrators before infrastructure fails.</li>
+                    </ul>
+
+                    <h2 class="text-3xl font-bold text-white mb-6">The Impact</h2>
+                    <div
+                        class="bg-surface p-8 border border-white/5 rounded-xl flex gap-8 mb-8 items-center justify-center">
+                        <div class="text-center">
+                            <span class="block text-4xl font-bold text-primary glow-text">100%</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Uptime Assurance</span>
+                        </div>
+                        <div class="w-px h-12 bg-white/10"></div>
+                        <div class="text-center">
+                            <span class="block text-4xl font-bold text-accent glow-text-accent">Zero</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Missed Renewals</span>
+                        </div>
                     </div>
-                </form>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="../contact.html"
+                        class="hoverable-btn inline-block px-8 py-4 bg-primary text-background font-bold text-lg rounded-md hover:scale-105 hover:bg-white transition-all duration-300 glow-shadow relative overflow-hidden group">
+                        <span class="relative z-10 text-black">Start Your Project</span>
+                        <div
+                            class="absolute inset-0 bg-white translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300 z-0">
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -164,7 +178,7 @@
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 relative z-10">
                 <!-- Left Info -->
                 <div class="footer-info max-w-sm">
-                    <a href="index.html"
+                    <a href="../index.html"
                         class="text-3xl font-bold tracking-tighter flex items-center gap-2 mb-6 hoverable-link">
                         <span class="text-primary glow-text">Flux</span>
                         <span class="text-white">vio</span>
@@ -174,18 +188,7 @@
                         workflows to build systems that dominate.
                     </p>
                     <div class="flex gap-4">
-                        <!-- X / Twitter (Hidden for now) 
-                    <a href="#" class="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center hover:border-white hover:bg-white hover:text-black transition-all hoverable-btn">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-                    </a>
-                    -->
-                        <!-- LinkedIn (Hidden for now) 
-                    <a href="#" class="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center hover:border-primary hover:bg-primary hover:text-white transition-all hoverable-btn hover:shadow-[0_0_15px_rgba(0,166,255,0.5)]">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    -->
-                        <!-- GitHub -->
-                        <a href="#"
+                        <a href="https://github.com/fluxvio" target="_blank" rel="noreferrer noopener"
                             class="w-10 h-10 rounded-full bg-background border border-white/10 flex items-center justify-center hover:border-accent hover:bg-accent hover:text-white transition-all hoverable-btn hover:shadow-[0_0_15px_rgba(255,0,229,0.5)]">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path fill-rule="evenodd"
@@ -200,11 +203,11 @@
                 <div class="footer-links flex gap-12">
                     <div class="flex flex-col gap-4">
                         <h4 class="font-bold uppercase tracking-widest text-sm mb-2 text-white/50">Navigation</h4>
-                        <a href="index.html#services"
+                        <a href="../index.html#services"
                             class="text-sm hover:text-primary transition-colors hoverable-link">Services</a>
-                        <a href="index.html#how"
+                        <a href="../index.html#how"
                             class="text-sm hover:text-primary transition-colors hoverable-link">Process</a>
-                        <a href="index.html#work"
+                        <a href="../index.html#work"
                             class="text-sm hover:text-primary transition-colors hoverable-link">Work</a>
                     </div>
                 </div>
@@ -212,8 +215,8 @@
                 <!-- Contact Form -->
                 <div class="footer-contact w-full max-w-xs">
                     <h4 class="font-bold uppercase tracking-widest text-sm mb-4 text-white/50">Stay Updated</h4>
-                    <form class="flex flex-col gap-4 group hoverable-card">
-                        <input type="email" placeholder="Enter your email" required
+                    <form class="flex flex-col gap-4 group hoverable-card" action="https://formspree.io/f/xqeyvwra" method="POST">
+                        <input type="email" placeholder="Enter your email" name="email" required
                             class="bg-background border border-white/10 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-accent focus:shadow-[0_0_10px_rgba(255,0,229,0.3)] transition-all duration-300">
                         <button type="submit"
                             class="bg-white/10 hover:bg-accent text-white font-bold text-sm px-4 py-3 rounded-md transition-all duration-300 hoverable-btn uppercase tracking-wider">
@@ -235,7 +238,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
         <!-- Main JS -->
-        <script src="main.js"></script>
+        <script src="../main.js"></script>
     </div>
 </body>
 
